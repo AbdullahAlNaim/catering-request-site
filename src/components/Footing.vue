@@ -4,7 +4,7 @@
 <template>
   <main id="bottom-arrange">
     <section>
-      <img id="logo-show" src="logo-one.png" alt="">
+      <!-- <img id="logo-show" src="logo-one.png" alt=""> -->
     </section>
     <section class="bottom-list">
       <ul>
@@ -46,5 +46,6 @@
   width: 50px;
   height: 50px;
 }
+
 
 </style>
