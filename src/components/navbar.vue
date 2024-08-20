@@ -1,10 +1,23 @@
 <script>
+export default {
+  data() {
+    return {
+
+    }
+  },
+  methods: {
+    noReload(event) {
+      event.preventDefault();
+      console.log('response')
+    }
+  }
+}
 </script>
 
 <template>
   <nav id="navo">
     <ul class="top-lists">
-      <li><a href="">HOME</a></li>
+      <li><a @click.prevent="onReload" href="">HOME</a></li>
       <li><a href="">GALLARY</a></li>
       <li><a href="">MENU</a></li>
       <li><a href="">ABOUT</a></li>
@@ -22,8 +35,6 @@
 </template>
 
 <style scoped>
-
-
 #navo {
   background-color: rgb(78, 155, 185);
   display: flex;
@@ -34,9 +45,6 @@
 
 #navo .top-lists {
   display: flex;
-}
-
-.top-lists ul {
 }
 
 .top-lists li {
