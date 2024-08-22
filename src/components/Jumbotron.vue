@@ -6,9 +6,20 @@
       <img id="jumbo-img" src="../assets/wedding-short.jpg" alt="">
     </section>
     <section id="jumbo-link">
-      <h1>DINOIR CAKES</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <button id="jumbo-button">ORDER NOW</button>
+      <!-- <div class="jumbo-aligner">
+
+      </div>
+      <div class="jumbo-aligner">
+        <div> -->
+          <h1>HANDCRAFTED CAKES</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <button id="jumbo-button">ORDER NOW</button>
+        <!-- </div>
+      </div>
+      <div class="jumbo-aligner">
+
+      </div> -->
+      
     </section>
     
   </main>
@@ -25,8 +36,9 @@
 
 #jumbo-link {
   position: absolute;
-  top: 50%;
-  left: 45%;
+  top: 30%;
+  left: 33%;
+  right: 33%;
   transform: (-100%, -100%);
   background-color: rgb(97, 174, 204, 0.8);
   padding: 20px;
@@ -44,6 +56,12 @@
 #jumbo-button:hover {
   background-color: rgb(212, 212, 212);
 }
+
+/* #jumbo-link .jumbo-aligner {
+  width: 33%;
+  height: 50px;
+  background-color: green;
+} */
 
 
 </style>

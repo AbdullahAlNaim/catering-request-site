@@ -2,15 +2,14 @@
 
 <template>
   <main>
-    <section id="gallery-link">
-      <h1>CAKE GALLERY</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime tempore, reprehenderit nobis pariatur quas aliquam ad!</p>
-      <button id="view-gallery">VIEW GALLERY</button>
+    <section id="about-img">
+      <img class="front-show" src="../assets/baker.jpg" alt="">
     </section>
-    <section id="gallery-mini">
-      <img class="front-show" src="../assets/wedding-pink.jpg" alt="">
-      <img class="front-show" id="matching" src="../assets/wedding-short.jpg" alt="">
+    <section id="about-section">
+      <h1>ABOUT ME</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime tempore, reprehenderit nobis pariatur quas aliquam ad! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime tempore, reprehenderit nobis pariatur quas aliquam ad! Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
     </section>
+ 
   </main>
 
 </template>
@@ -22,36 +21,36 @@ body {
 
 main {
   display: flex;
-  background-color: rgb(207, 215, 221);
+  background-color: rgb(120, 186, 212);
   padding: 60px 20px 60px 20px;
+  color: white;
 }
 
 .front-show {
   width: 300px;
-
 }
 
 #matching {
   height: 168px;
 }
 
-#gallery-link {
+#about-img {
   width: 50%;
 }
 
-#gallery-link button {
-  padding: 10px;
-  border-radius: 20px;
-  border: 0;
-}
-
-#view-gallery:hover {
-  background-color: rgb(176, 207, 235);
-  color: white;
-}
-
-#gallery-mini {
+#about-img {
   width: 50%;
   text-align: center;
+}
+
+#about-img img {
+  width: 100%;
+}
+
+#about-section {
+  width: 50%;
+  margin-left: 5%;
+  position: relative;
+  margin-top: 100px;
 }
 </style>

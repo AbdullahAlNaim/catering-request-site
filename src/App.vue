@@ -2,6 +2,7 @@
 export default {
   data() {
     return {
+      home: true,
       gallery: false,
       menu: false,
       about: false,
@@ -12,21 +13,26 @@ export default {
     }
   },
   methods: {
-    words() {
-      console.log('hi')
+    words(chosen,payload) {
+      this.chosen = payload;
+      console.log('Received', chosen, payload, this.chosen);
+      console.log(this.home);
     }
   }
 }
 </script>
 
 <template>
-  <nav-bar></nav-bar>
-  <jumbotron></jumbotron>
-  <share-social id="middle-section"></share-social>
-  <gallery-preview class="parts"></gallery-preview>
-  <gallery-preview class="parts"></gallery-preview>
+  <nav-bar @some-event="words"></nav-bar>
+  <div id="page-size">
+    <section v-if="home">
+    <jumbotron></jumbotron>
+    <share-social id="middle-section"></share-social>
+    <gallery-preview class="parts"></gallery-preview>
+    <about-preview class="parts"></about-preview>
+  </section>
+  </div>
   <footing id="bottom-section"></footing>
-
 </template>
 
 <style scoped>

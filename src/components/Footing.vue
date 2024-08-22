@@ -42,10 +42,12 @@
   list-style: none;
 }
 
+.bottom-list ul li a:hover {
+  color: black;
+}
+
 #logo-show {
   width: 50px;
   height: 50px;
 }
-
-
 </style>

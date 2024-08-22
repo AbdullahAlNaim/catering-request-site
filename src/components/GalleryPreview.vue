@@ -1,4 +1,18 @@
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      gallery: false,
+      home: true,
+    }
+  },
+  methods: {
+    onGallery() {
+      this.$emit('gallery-event', !this.gallery);
+    }
+  }
+}
+</script>
 
 <template>
   <main>
@@ -9,7 +23,7 @@
     </section>
     <section id="gallery-mini">
       <img class="front-show" src="../assets/wedding-pink.jpg" alt="">
-      <img class="front-show" id="matching" src="../assets/wedding-short.jpg" alt="">
+      <img class="front-show" src="../assets/wedding-pink.jpg" alt="">
     </section>
   </main>
 
@@ -22,7 +36,9 @@ body {
 
 main {
   display: flex;
-  background-color: rgb(207, 215, 221);
+  /* background-color: rgb(207, 215, 221); */
+  background-color: rgb(120, 186, 212);
+  color: white;
   padding: 60px 20px 60px 20px;
 }
 
@@ -53,5 +69,9 @@ main {
 #gallery-mini {
   width: 50%;
   text-align: center;
+}
+
+#gallery-mini .front-show {
+  width: 50%;
 }
 </style>
