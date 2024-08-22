@@ -2,77 +2,30 @@
 export default {
   data() {
     return {
-      home: true,
-      gallery: false,
-      menu: false,
-      about: false,
-      contact: false,
-      facts: false,
-      pricing: false,
-      order:false,
+      
     }
   },
   methods: {
-    toggle(pickedPage) {
-      this.home = false;
-      this.gallery = false;
-      this.menu= false;
-      this.about= false;
-      this.contact= false;
-      this.facts= false;
-      this.pricing= false;
-      this.order= false;
-
-      this.pickedPage = !this.pickedPage
-      return this.pickedPage;
-    },
-    onHome() {
-      // event.preventDefault();
-      
-      this.$emit('some-event', 'home', this.toggle('home'));
-    },
-    onGallery() {
-
-      this.$emit('some-event','gallery', this.toggle('gallery'));
-    },
-    onMenu() {
-      this.$emit('some-event', this.menu);
-    },
-    onAbout() {
-      this.$emit('some-event', this.about);
-    },
-    onContact() {
-      this.$emit('some-event', this.contact);
-    },
-    onFacts() {
-      this.$emit('some-event', this.facts);
-    },
-    onPricing() {
-      this.$emit('some-event', this.pricing);
-    },
-    onOrderNow() {
-      this.$emit('some-event', this.order);
-    }
-  },
+  }
 }
 </script>
 
 <template>
   <nav id="navo">
     <ul id="left-list" class="top-lists">
-      <li><button class="nav-button" @click.prevent="onHome" href=""><strong>HOME</strong></button></li>
-      <li><button class="nav-button" @click.prevent="onGallery" href=""><strong>GALLARY</strong></button></li>
-      <li><button class="nav-button" @click.prevent="onMenu" href=""><strong>MENU</strong></button></li>
-      <li><button class="nav-button" @click.prevent="onAbout" href=""><strong>ABOUT</strong></button></li>
+      <li><router-link class="nav-button" to="/"><strong>HOME</strong></router-link></li>
+      <li><router-link class="nav-button" to="/gallery"><strong>GALLERY</strong></router-link></li>
+      <li><router-link class="nav-button" to="/Menu"><strong>MENU</strong></router-link></li>
+      <li><router-link class="nav-button" to="/About"><strong>ABOUT</strong></router-link></li>
     </ul>
 
     <h1 id="page-title"><a href="">SWEET CHILLI</a></h1>
 
     <ul id="right-list" class="top-lists">
-      <li><button class="nav-button"  @click.prevent="on" href=""><strong>CONTACT</strong></button></li>
-      <li><button class="nav-button"  @click.prevent="on" href=""><strong>FACTS</strong></button></li>
-      <li><button class="nav-button"  @click.prevent="on" href=""><strong>PRICING</strong></button></li>
-      <li><button class="nav-button"  @click.prevent="on" href=""><strong>ORDER NOW</strong></button></li>
+      <li><router-link class="nav-button"  to="/Contact"><strong>CONTACT</strong></router-link></li>
+      <li><router-link class="nav-button"  to="/Facts"><strong>FACTS</strong></router-link></li>
+      <li><router-link class="nav-button"  to="/Pricing"><strong>PRICING</strong></router-link></li>
+      <li><router-link class="nav-button"  to="/Order"><strong>ORDER NOW</strong></router-link></li>
     </ul>
   </nav>
 </template>

@@ -7,6 +7,7 @@ import Footing from './components/Footing.vue'
 import ShareSocial from './components/ShareSocial.vue'
 import GalleryPreview from './components/GalleryPreview.vue'
 import AboutPreview from './components/AboutPreview.vue'
+import router from './router'
 
 const app = createApp(App);
 
@@ -16,6 +17,8 @@ app.component('footing', Footing);
 app.component('share-social', ShareSocial);
 app.component('gallery-preview', GalleryPreview);
 app.component('about-preview', AboutPreview);
+
+app.use(router);
 
 app.mount('#app')
 
