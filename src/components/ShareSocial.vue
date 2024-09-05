@@ -1,10 +1,9 @@
 <template>
-  <h1>FOLLOW ME ON <a href="">INSTAGRAM</a></h1>
+  <h1>FOLLOW ME ON <a href="https://www.instagram.com/the_sweetchilli/">INSTAGRAM</a></h1>
 </template>
 
 <style scoped>
 h1 {
-  /* margin-bottom: 2000px; */
   text-align: center;
 }
 

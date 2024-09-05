@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import.meta.env.BASE_UR
+
 import Home from '../views/Home.vue'
 import Gallery from '../views/Gallery.vue'
+import About from '../views/About.vue'
 import Menu from '../views/Menu.vue'
 import Order from '../views/Order.vue'
-
-import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
 import Facts from '../views/Facts.vue'
 // import Pricing from '../views/Pricing.vue'
