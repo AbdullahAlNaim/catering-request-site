@@ -1,5 +1,4 @@
 <template>
-  <nav-bar></nav-bar>
   <main id="gallery-section">
     <h1>Gallery Page</h1>
     <hr>
@@ -17,9 +16,6 @@
       <img class="gallery-img" src="../assets/light-green-pink-cake.jpg" alt="">
     </section>
   </main>
-  
-
-  <footing id="bottom-section"></footing>
 </template>
 
 <style scoped>

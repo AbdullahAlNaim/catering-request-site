@@ -1,5 +1,4 @@
 <template>
-  <nav-bar></nav-bar>
   <main id="order-section">
     <h1>Order Page</h1>
     <hr>
@@ -110,9 +109,6 @@
         
     </section>
   </main>
-  
-
-  <footing id="bottom-section"></footing>
 </template>
 
 <style scoped>

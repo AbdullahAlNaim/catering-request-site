@@ -33,7 +33,6 @@ export default {
 </script>
 
 <template>
-  <nav-bar></nav-bar>
   <main id="contact-section">
     <h1>Contact Page</h1>
     <hr>
@@ -68,7 +67,6 @@ export default {
     </section>
   </main>
   <br>
-  <footing id="bottom-section"></footing>
 </template>
 
 <style scoped>

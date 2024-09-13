@@ -3,7 +3,6 @@
 </script>
 
 <template>
-  <nav-bar @some-event="words"></nav-bar>
   <div id="page-size">
     <section>
       <jumbotron></jumbotron>
@@ -12,7 +11,7 @@
       <about-preview class="parts"></about-preview>
     </section>
   </div>
-  <footing id="bottom-section"></footing>
+  
 </template>
 
 <style scoped>
