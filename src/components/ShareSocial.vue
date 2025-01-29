@@ -1,5 +1,5 @@
 <template>
-  <h1>FOLLOW ME ON <a href="https://www.instagram.com/the_sweetchilli/">INSTAGRAM</a></h1>
+  <h1>FOLLOW ME ON <a href="https://www.instagram.com/sweetchillicakes/">INSTAGRAM</a></h1>
 </template>
 
 <style scoped>

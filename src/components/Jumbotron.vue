@@ -1,9 +1,20 @@
-<script></script>
+<script>
+import { useJumbotronStore } from '../stores/content/jumbotronStore';
+export default {
+  setup () {
+    const jumboStore = useJumbotronStore();
+    return { jumboStore }
+  },
+  mounted () {
+    this.jumboStore.fetchJumbotron();
+  }
+}
+</script>
 
 <template>
   <main id="main-jumbo">
     <section id="jumbo-section">
-      <img id="jumbo-img" src="../assets/wedding-short.jpg" alt="">
+      <img id="jumbo-img" :src="jumboStore.jumbotronImage" alt="">
     </section>
     <section id="jumbo-link">
       <!-- <div class="jumbo-aligner">
@@ -11,8 +22,8 @@
       </div>
       <div class="jumbo-aligner">
         <div> -->
-          <h1>HANDCRAFTED CAKES</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <h1>{{ jumboStore.jumbotronTitle }}</h1>
+          <p>{{ jumboStore.jumbotronText }}</p>
           <button id="jumbo-button">ORDER NOW</button>
         <!-- </div>
       </div>

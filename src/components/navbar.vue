@@ -1,5 +1,10 @@
 <script>
+import { useUserStore } from '../stores/user/userStore';
 export default {
+  setup () {
+    const userStore = useUserStore();
+    return { userStore };
+  },
   data() {
     return {
       
@@ -15,7 +20,7 @@ export default {
     <ul id="left-list" class="top-lists nav-list">
       <li><router-link class="nav-button" to="/"><strong>HOME</strong></router-link></li>
       <li><router-link class="nav-button" to="/gallery"><strong>GALLERY</strong></router-link></li>
-      <li><router-link class="nav-button" to="/Menu"><strong>MENU</strong></router-link></li>
+      <!-- <li><router-link class="nav-button" to="/Menu"><strong>MENU</strong></router-link></li> -->
       <li><router-link class="nav-button" to="/About"><strong>ABOUT</strong></router-link></li>
     </ul>
 
@@ -23,9 +28,13 @@ export default {
 
     <ul id="right-list" class="top-lists nav-list">
       <li><router-link class="nav-button"  to="/Contact"><strong>CONTACT</strong></router-link></li>
-      <li><router-link class="nav-button"  to="/Facts"><strong>FACTS</strong></router-link></li>
+      <!-- <li><router-link class="nav-button"  to="/Facts"><strong>FACTS</strong></router-link></li> -->
       <!-- <li><router-link class="nav-button"  to="/Pricing"><strong>PRICING</strong></router-link></li> -->
-      <li><router-link class="nav-button"  to="/Order"><strong>ORDER NOW</strong></router-link></li>
+      <!-- <li><router-link class="nav-button"  to="/Order"><strong>ORDER NOW</strong></router-link></li> -->
+      <li v-if="userStore.userAuthenticated">
+        <router-link class="nav-button" to="/api/dashboard"><strong>DASHBOARD</strong></router-link>
+        <router-link class="nav-button" @click="userStore.logout()" to="/api/admin-login"><strong>LOGOUT</strong></router-link>
+      </li>
     </ul>
   </nav>
 </template>

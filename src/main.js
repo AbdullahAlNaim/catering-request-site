@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 import './style.css'
 import App from './App.vue'
 import Navbar from './components/navbar.vue'
@@ -11,6 +12,9 @@ import router from './router'
 
 const app = createApp(App);
 
+app.use(router);
+app.use(createPinia());
+
 app.component('nav-bar', Navbar);
 app.component('jumbotron', Jumbotron);
 app.component('footing', Footing);
@@ -18,7 +22,7 @@ app.component('share-social', ShareSocial);
 app.component('gallery-preview', GalleryPreview);
 app.component('about-preview', AboutPreview);
 
-app.use(router);
+
 
 app.mount('#app')
 

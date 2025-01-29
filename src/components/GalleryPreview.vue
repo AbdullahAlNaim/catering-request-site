@@ -1,5 +1,10 @@
 <script>
+import { useGalleryPreviewStore } from '../stores/content/galleryPreviewStore';
 export default {
+  setup () {
+    const galleryPreviewStore = useGalleryPreviewStore();
+    return { galleryPreviewStore }
+  },
   data() {
     return {
       gallery: false,
@@ -10,6 +15,9 @@ export default {
     onGallery() {
       this.$emit('gallery-event', !this.gallery);
     }
+  },
+  mounted () {
+    this.galleryPreviewStore.fetchGalleryPreview();
   }
 }
 </script>
@@ -17,8 +25,8 @@ export default {
 <template>
   <main>
     <section id="gallery-link">
-      <h1>CAKE GALLERY</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime tempore, reprehenderit nobis pariatur quas aliquam ad!</p>
+      <h1>{{ galleryPreviewStore.galleryPreviewTitle }}</h1>
+      <p>{{ galleryPreviewStore.galleryPreviewText }}</p>
       <button id="view-gallery">VIEW GALLERY</button>
     </section>
     <section id="gallery-mini">
